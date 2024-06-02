@@ -1,14 +1,13 @@
-const { error } = require("console");
-const file = require("../Models/File");
+ const File = require("../Models/File");
 
 
-exports.localFileUpload=(req,res)=>{
+exports.localFileUpload= async(req,res)=>{
     try{
        const file = req.files.file;
        console.log(file);
 
 
-       let path = __dirname +"/files/" + Date.now() + `.${file.name.slice(".")[1]}`;
+       let path = __dirname +"/files/" + Date.now() + `.${file.name.split(".")[1]}`;
         console.log("PATH ==>"+ path);
 
         file.mv(path,(err)=>{
@@ -16,17 +15,17 @@ exports.localFileUpload=(req,res)=>{
             console.log("File can't be moved");
         })
 
-        res.Json({
+        res.json({
             success:true,
             message:("Local files uploaded successfully")
         });
     }
     catch(err){
         console.log(err);
-        res.Json({
+        res.json({
             success:false,
             error:err,
-            message:err.message;
+            message:err.message,
         })
     }
 }
