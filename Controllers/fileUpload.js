@@ -29,3 +29,16 @@ exports.localFileUpload= async(req,res)=>{
         })
     }
 }
+
+
+exports.imageUpload=(req,res)=>{
+    try{
+         const image =req.files.image;
+         console.log(image);
+
+         
+    }
+    catch(err){
+
+    }
+}
