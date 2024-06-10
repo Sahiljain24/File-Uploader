@@ -43,3 +43,11 @@ exports.imageUpload=(req,res)=>{
     }
 }
 
+exports.reducedImageUpload=(req,res)=>{
+    try{
+
+    }
+    catch{
+        
+    }
+}
