@@ -45,7 +45,7 @@ exports.imageUpload=(req,res)=>{
 
 exports.reducedImageUpload=(req,res)=>{
     try{
-     const =
+     const = req.files.file;
     }
     catch{
         
