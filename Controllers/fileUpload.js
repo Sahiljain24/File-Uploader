@@ -46,6 +46,8 @@ exports.imageUpload=(req,res)=>{
 exports.reducedImageUpload=(req,res)=>{
     try{
      const = req.files.file;
+
+     console.log()
     }
     catch{
         
